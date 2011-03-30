@@ -1,0 +1,11 @@
+My .vimrc which was modified from the default JANUS distro.
+
+Some notable mentions:
+
+jk combo for ESC key
+: mapped to ; . only one key instead of pressing shift
+leader +p will perform php syntax check
+compoucher is default theme
+
+Enjoy!
+_Zach
