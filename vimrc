@@ -1,7 +1,6 @@
 set nocompatible
 set autoindent
 set visualbell
-set relativenumber
 set number
 set ruler
 syntax on
@@ -105,7 +104,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color compoucher
+color solarized
 
 "Directories for swp files
 set backupdir=~/.vim/backup
@@ -120,7 +119,6 @@ noremap <C-P> ^[:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR>
 set gfn=Monaco:h14
-source ~/.vim/php-doc.vim
 " makes ,w split windows vertically
  nnoremap <leader>w <C-w>v<C-w>l
 
@@ -145,4 +143,23 @@ map <Leader>p :!php -l %<CR>
      ""      echo map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')
       ""     endfunc
 " Folding and unfolding
-set rnu
+  let g:user_zen_expandabbr_key = '<c-z>'
+
+
+  " Bubble single lines
+   nmap <C-Up> ddkP
+   nmap <C-Down> ddp
+   " Bubble multiple lines
+   vmap <C-Up> xkP`[V`]
+   vmap <C-Down> xp`[V`]
+
+   " Syntastic
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    ""SyntasticEnable php
+    ""SyntasticEnable javascript
+    ""SyntasticEnable ruby
+	let g:syntastic_enable_signs=1
+    let g:syntastic_auto_loc_list=1
+   let g:syntastic_quiet_warnings=1

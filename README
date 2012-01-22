@@ -5,7 +5,10 @@ Some notable mentions:
 jk combo for ESC key
 : mapped to ; . only one key instead of pressing shift
 leader +p will perform php syntax check
-compoucher is default theme
+
+Now using Solarized for vim colors instead of compoucher theme.
+Added Syntastic checking for php, javascript and ruby
+JSHint also included with :JSHint
 
 Enjoy!
 _Zach
